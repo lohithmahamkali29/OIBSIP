@@ -119,11 +119,15 @@ function deleteLastChar() {
 
 
 function calculateSquare() {
-	var input = form.displayResult.value;
+  let num = document.getElementsByName("displayResult")[0].value;
+  if (!isNaN(num)) {
+    var input = form.displayResult.value;
         var squareRoot = Math.sqrt(parseFloat(input));
         form.displayResult.value = squareRoot;
-    }
-
+  } else {
+    document.getElementsByName("displayResult")[0].value = "Please enter a valid number";
+  }
+}
 
 
 
