@@ -11,7 +11,7 @@ For More Source Code Visit Our Blog ( https://webdevtrick.com )
 **/
 
 body, html {
-	background: #ECEDEF;
+	background:  #000000;
 	margin: 0;
 	padding: 0;
 }
@@ -32,7 +32,7 @@ body, html {
 	width: 100%;
 	height: 60px;
 	padding: 40px 0;
-	background: #058fff;
+	background: #FF0000;
 	border-top-left-radius: 14px;
 	border-top-right-radius: 14px;
 }
@@ -77,10 +77,10 @@ input[type=text] {
 	
 }
 .red {
-	background: #FFFFFF
+	background: #141313
 69e1 !important;
-	color: #FF0000
- !important;
+	color: #ffffff;
+ 
 	
 }
 
@@ -117,11 +117,16 @@ function deleteLastChar() {
   form.displayResult.value = percent;
 }
 
-function calculateSquareRoot() {
-  var input = form.displayResult.value;
-  var squareRoot = Math.sqrt(parseFloat(input));
-  form.displayResult.value = squareRoot;
-}
+
+function calculateSquare() {
+	var input = form.displayResult.value;
+        var squareRoot = Math.sqrt(parseFloat(input));
+        form.displayResult.value = squareRoot;
+    }
+
+
+
+
 
 
   function changeSign() {
@@ -180,7 +185,7 @@ function calculateSquareRoot() {
 				  <input type="button" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
 				  <input type="button" value="Clear" style="font-size:20px;" onclick="clearCalculator()">
 				  <input type="button" name="percentage" value="%" style="font-size:20px;" onClick="calculatePercent()">
-				  <input type="button" name="sqrt" value="√" style="font-size:20px;" onClick="calculateSquareRoot()">
+				  <input type="button" name="square" value="x²" onClick="calculateSquare()">
                   <input type="button" name="plusminus" value="+/-" style="font-size:20px;" onclick="changeSign()">
 				</div>
 			</div>
